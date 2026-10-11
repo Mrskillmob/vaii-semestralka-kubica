@@ -72,7 +72,7 @@ Reprezentuje registrovaného zákazníka alebo administrátora.
 - id
 - meno
 - email
-- heslo (hash)
+- heslo
 - rola
 - dátum registrácie
 
