@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="sk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ElectroShop – responzívny statický katalóg elektroniky.">
+  <title>ElectroShop | Katalóg produktov</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="ElectroShop – domov">
+        <span class="brand-icon" aria-hidden="true">E</span><span>Electro<span class="brand-accent">Shop</span></span>
+      </a>
+      <form class="header-search" role="search" action="katalog.html" method="get">
+        <label class="sr-only" for="header-search">Hľadať produkty</label>
+        <input id="header-search" type="search" name="q" placeholder="Hľadať produkty…">
+        <button type="submit">Hľadať</button>
+      </form>
+      <nav class="main-nav" aria-label="Hlavná navigácia">
+        <a href="index.html">Domov</a><a href="katalog.html" aria-current="page">Katalóg</a><a href="#filtre">Kategórie</a><a href="#prihlasenie">Prihlásiť sa</a><a class="cart-link" href="#kosik">Košík <span class="cart-count">0</span></a>
+      </nav>
+    </div>
+  </header>
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Drobečková navigácia"><a href="index.html">Domov</a><span aria-hidden="true">/</span><span>Katalóg produktov</span></nav>
+    <div class="catalog-heading"><div><p class="eyebrow">NAŠA PONUKA</p><h1>Katalóg produktov</h1><p class="muted">Vyberte si z elektroniky a počítačového príslušenstva.</p></div><span class="count-pill">6 produktov</span></div>
+    <div class="page-layout catalog-layout">
+      <aside class="sidebar filter-panel" id="filtre" aria-labelledby="filter-title">
+        <h2 id="filter-title">Filtre</h2>
+        <form action="katalog.html" method="get">
+          <fieldset><legend>Kategória</legend>
+            <label class="check-row"><input type="checkbox" name="category" value="notebooky"> Notebooky</label>
+            <label class="check-row"><input type="checkbox" name="category" value="monitory"> Monitory</label>
+            <label class="check-row"><input type="checkbox" name="category" value="klavesnice"> Klávesnice</label>
+            <label class="check-row"><input type="checkbox" name="category" value="mysi"> Myši</label>
+          </fieldset>
+          <fieldset id="cena"><legend>Cena (€)</legend><div class="price-inputs"><label>Od<input type="number" name="min" min="0" placeholder="0"></label><label>Do<input type="number" name="max" min="0" placeholder="1500"></label></div></fieldset>
+          <fieldset><legend>Dostupnosť</legend><label class="check-row"><input type="checkbox" name="stock" value="1"> Len skladom</label></fieldset>
+          <button class="primary-button full-width" type="submit">Použiť filtre</button>
+          <p class="form-note">Ukážka rozloženia; filtrovanie bude funkčné v ďalších etapách.</p>
+        </form>
+      </aside>
+      <main id="main-content" class="page-main catalog-main">
+        <section class="toolbar" aria-label="Vyhľadávanie a triedenie">
+          <form class="catalog-search" role="search" action="katalog.html" method="get"><label class="sr-only" for="catalog-query">Vyhľadávanie produktu</label><input id="catalog-query" type="search" name="q" placeholder="Názov produktu…"><button type="submit">Hľadať</button></form>
+          <div class="sort-wrap"><label for="sort">Zoradiť:</label><select id="sort" name="sort"><option>Odporúčané</option><option>Cena: od najnižšej</option><option>Cena: od najvyššej</option><option>Názov A–Z</option></select></div>
+        </section>
+        <section class="product-grid" aria-label="Produkty">
+          <article class="product-card"><div class="product-visual"><div class="device laptop" aria-hidden="true"><span></span></div></div><div class="product-info"><p class="product-category">Notebooky</p><h2>Herný notebook 15,6″</h2><p class="product-meta">Výkonný notebook na prácu aj hry</p><div class="product-bottom"><strong>1 199,00 €</strong><a href="#detail-notebook" class="outline-button">Detail</a></div></div></article>
+          <article class="product-card"><div class="product-visual"><div class="device monitor" aria-hidden="true"><span></span></div></div><div class="product-info"><p class="product-category">Monitory</p><h2>Monitor 27″ QHD</h2><p class="product-meta">Ostrý obraz a vysoká obnovovacia frekvencia</p><div class="product-bottom"><strong>249,00 €</strong><a href="#detail-monitor" class="outline-button">Detail</a></div></div></article>
+          <article class="product-card"><div class="product-visual"><div class="device keyboard" aria-hidden="true"><span></span></div></div><div class="product-info"><p class="product-category">Klávesnice</p><h2>Mechanická klávesnica</h2><p class="product-meta">Podsvietená klávesnica na každodenné použitie</p><div class="product-bottom"><strong>89,90 €</strong><a href="#detail-klavesnica" class="outline-button">Detail</a></div></div></article>
+          <article class="product-card"><div class="product-visual"><div class="device mouse" aria-hidden="true"><span></span></div></div><div class="product-info"><p class="product-category">Myši</p><h2>Bezdrôtová herná myš</h2><p class="product-meta">Presný senzor a ergonomické telo</p><div class="product-bottom"><strong>59,90 €</strong><a href="#detail-mys" class="outline-button">Detail</a></div></div></article>
+          <article class="product-card"><div class="product-visual"><div class="device headphones" aria-hidden="true"><span></span></div></div><div class="product-info"><p class="product-category">Príslušenstvo</p><h2>Bezdrôtové slúchadlá</h2><p class="product-meta">Pohodlie a čistý zvuk pri počúvaní</p><div class="product-bottom"><strong>79,90 €</strong><a href="#detail-sluchadla" class="outline-button">Detail</a></div></div></article>
+          <article class="product-card"><div class="product-visual"><div class="device storage" aria-hidden="true"><span>SSD</span></div></div><div class="product-info"><p class="product-category">Úložiská</p><h2>SSD disk 1 TB</h2><p class="product-meta">Rýchle úložisko pre počítač</p><div class="product-bottom"><strong>94,90 €</strong><a href="#detail-ssd" class="outline-button">Detail</a></div></div></article>
+        </section>
+        <div class="pagination-row"><p>Zobrazené produkty: 1–6 z 6</p><nav class="pagination" aria-label="Stránkovanie"><span aria-current="page">1</span><a href="#strana-2">2</a><a href="#strana-3">3</a><a href="#dalsia">›</a></nav></div>
+      </main>
+    </div>
+  </div>
+  <footer class="site-footer" id="kontakt"><div class="container footer-inner"><span>© 2026 ElectroShop · Semestrálny projekt VAII</span><nav aria-label="Pätička"><a href="#o-aplikacii">O aplikácii</a><a href="#kontakt">Kontakt</a><a href="#informacie">Informácie</a></nav></div></footer>
+</body>
+</html>

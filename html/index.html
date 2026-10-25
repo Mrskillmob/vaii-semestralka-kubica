@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="sk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ElectroShop – návrh základného rozloženia webovej aplikácie.">
+  <title>ElectroShop | Rozloženie aplikácie</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="ElectroShop – domov">
+        <span class="brand-icon" aria-hidden="true">E</span><span>Electro<span class="brand-accent">Shop</span></span>
+      </a>
+      <form class="header-search" role="search" action="katalog.html" method="get">
+        <label class="sr-only" for="header-search">Hľadať produkty</label>
+        <input id="header-search" type="search" name="q" placeholder="Hľadať produkty…">
+        <button type="submit">Hľadať</button>
+      </form>
+      <nav class="main-nav" aria-label="Hlavná navigácia">
+        <a href="index.html" aria-current="page">Domov</a>
+        <a href="katalog.html">Katalóg</a>
+        <a href="katalog.html#filtre">Kategórie</a>
+        <a href="#prihlasenie">Prihlásiť sa</a>
+        <a class="cart-link" href="#kosik">Košík <span class="cart-count">0</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Drobečková navigácia">
+      <a href="index.html">Domov</a><span aria-hidden="true">/</span><span>Rozloženie aplikácie</span>
+    </nav>
+    <div class="page-layout">
+      <aside class="sidebar" aria-labelledby="sidebar-title">
+        <h2 id="sidebar-title">Bočný panel</h2>
+        <p class="muted small">Miesto na navigáciu a filtre.</p>
+        <ul class="sidebar-links">
+          <li><a href="katalog.html#filtre">Kategórie <span aria-hidden="true">›</span></a></li>
+          <li><a href="katalog.html#cena">Cenový rozsah <span aria-hidden="true">›</span></a></li>
+          <li><a href="katalog.html">Dostupnosť <span aria-hidden="true">›</span></a></li>
+          <li><a href="katalog.html">Ďalšie filtre <span aria-hidden="true">›</span></a></li>
+        </ul>
+      </aside>
+      <main id="main-content" class="page-main">
+        <section class="section-heading" aria-labelledby="page-title">
+          <p class="eyebrow">ZÁKLADNÁ ŠABLÓNA</p>
+          <h1 id="page-title">Názov aplikačnej stránky</h1>
+          <p class="muted">Toto je všeobecné rozloženie aplikácie ElectroShop podľa prvého wireframu.</p>
+        </section>
+        <section class="placeholder-area" aria-labelledby="content-title">
+          <div class="placeholder-icon" aria-hidden="true">▦</div>
+          <h2 id="content-title">Hlavná obsahová oblasť</h2>
+          <p>Na tomto mieste sa podľa aktuálnej stránky zobrazí katalóg produktov, detail produktu, nákupný košík, objednávky alebo administrácia.</p>
+          <div class="placeholder-cards" aria-hidden="true"><div></div><div></div><div></div></div>
+          <a class="primary-button" href="katalog.html">Pozrieť katalóg produktov →</a>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <footer class="site-footer" id="kontakt">
+    <div class="container footer-inner"><span>© 2026 ElectroShop · Semestrálny projekt VAII</span><nav aria-label="Pätička"><a href="#o-aplikacii">O aplikácii</a><a href="#kontakt">Kontakt</a><a href="#informacie">Informácie</a></nav></div>
+  </footer>
+</body>
+</html>
